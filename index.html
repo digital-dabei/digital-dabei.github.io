@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Lernprojekt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Mein Lernprojekt</h1>
+    <p class="intro">Hier lernen Sie, wie Sie ihr Handy nutzen können!</p>
+</header>
+
+<main>
+
+
+    <section aria-labelledby="navigation">
+        <h2 id="navigation">Lernbereiche</h2>
+
+        <div class="grid">
+
+            <a href="unterseite/intro-learning_AL.html" class="tile">
+                Einführung
+                <span class="tile-desc">Lernnen Sie Ihr Handy/Smartphone kennen</span>
+            </a>
+            <a href="unterseite/settings-learning_AL.html" class="tile">
+                Einstellungen
+                <span class="tile-desc">Wie stelle ich mein Handy gut ein</span>
+            </a>
+            <a href="unterseite/whatsapp-learning_AL.html" class="tile">
+                WhatsApp
+                <span class="tile-desc">Installieren und sich anmelden</span>
+            </a>
+            <a href="unterseite/whatsapp-functions-learning_AL.html" class="tile">
+                WhatsApp nutzen
+                <span class="tile-desc">Textnachrichten im Internet</span>
+            </a>
+            <a href="unterseite/emails-learnings_AL.html" class="tile">
+                E-Mail
+                <span class="tile-desc">Im Handy für sich nutzen!</span>
+            </a>
+            <a href="unterseite/browser-learnings_AL.html" class="tile">
+                Browser
+                <span class="tile-desc">Ihr Schritt zur Suchmaschiene</span>
+            </a>
+            <a href="unterseite/contacts-learning_AL.html" class="tile">
+                Kontakte
+                <span class="tile-desc">Pflegen und verwalten</span>
+            </a>
+            
+        </div>
+    </section>
+    
+    <section aria-labelledby="podcast">
+        <ol class="step-list">
+    	    <li class="step-item">
+                <div class="step-text">
+                    <h2>Podcast</h2>
+                
+                    <p>
+                        Hier finden Sie einen Podcast über eine mögliche Gefahr bei der Handynutzung. Keine Angst, Sie erfahren direkt auch praktische Lösungsansätze. Zum Starten des Podcasts drücken Sie auf den großen blauen Play-Button ("Podcast starten").
+                    </p>
+                
+                    <!-- Großer, barrierefreier Podcast-Player-Bereich -->
+                    <div class="audio-player" style="margin: 25px 0;">
+                        <button id="playBtn" aria-label="Podcast abspielen">
+                            <span id="btnIcon">▶</span> Podcast abspielen
+                        </button>
+                        <audio id="audio" src="audio/Podcast.mp3"></audio>
+                    </div>
+                    
+                    <p >
+                       Der Podcastinhalt wurde in Anlehnung an Koza, E., Öztürk, A. und Willer, M. (2024). "Social Engineering und Human Hacking: Strategien zur Prävention und Abwehr von Manipluationstechniken in der IT." herausgearbeitet.
+                    </p>
+                </div> 
+            </li>
+	    </ol>
+    </section>
+
+</main>
+
+<script>
+    const btn = document.getElementById("playBtn");
+    const btnIcon = document.getElementById("btnIcon");
+    const audio = document.getElementById("audio");
+
+    btn.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+            btnIcon.textContent = "⏸";
+            btn.innerHTML = '<span id="btnIcon">⏸</span> Podcast pausieren';
+        } else {
+            audio.pause();
+            btnIcon.textContent = "▶";
+            btn.innerHTML = '<span id="btnIcon">▶</span> Podcast abspielen';
+        }
+    });
+</script>
+
+</body>
+<footer>
+    <p>&copy; 2026 Altynai Lorenz | Frei nutzbar unter <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.de" target="_blank" rel="noopener">CC0 (Creative Commons Zero)</a>.</p>
+</footer>
+</html>
