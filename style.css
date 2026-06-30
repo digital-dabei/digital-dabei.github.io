@@ -30,11 +30,12 @@ header h1 {
 }
 
 .intro {
-   	font-size: 1.2rem;
-   	color: #102a43;
-   	max-width: 600px;
+   	font-size: 1.35rem;       
+   	color: #0b1e33;             
+   	font-weight: 600;           
+   	max-width: 650px;
    	margin: 0 auto;
-}
+   	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
 
 section {
    	padding: 30px 20px;
