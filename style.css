@@ -39,10 +39,11 @@ header h1 {
 }
 
 .intro ul {
-    display: inline-block;     
-    text-align: left;          
+    list-style-position: inside;
+    text-align: left;
+    display: inline-block;
     margin: 20px auto;
-    padding-left: 25px;
+    padding-left: 0;
 }
 
 .intro li {
